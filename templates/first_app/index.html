@@ -1,0 +1,11 @@
+{% extends 'first_app/base.html' %}
+
+{% block body_block %}
+<div class="jumbotron">
+    <h1>{{ text|cut:"i" }}</h1>
+    <h1>{{ number|add:"-100" }}</h1>
+    <h3>add <a href="{% url 'first_app:models' %}">'first_app/models'</a> path to go to models page</h3>
+    <h3>add <a href="{% url 'first_app:form_page' %}">'first_app/formpage'</a> path to go to form page</h3>
+    <h3>add <a href="{% url 'first_app:new_user_form' %}">'first_app/userform'</a> path to go to user form page</h3>
+</div>
+{% endblock body_block %}
